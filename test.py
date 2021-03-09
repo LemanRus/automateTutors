@@ -1,16 +1,11 @@
-def fun01(my_args):
-    for name, value in enumerate(my_args):
-        print('{0} is an {1}'.format(name, value))
+def magic(lst):
+    new_lst = []
+    for i in lst:
+        if i % 2:
+            new_lst.append(i)
+    return new_lst
 
-
-def fun02(*my_args):
-    for name, value in enumerate(my_args):
-        print('{0} is an {1}'.format(name, value))
-
-
-def fun03(**my_args):
-    for name, value in enumerate(my_args):
-        print('{0} is an {1}'.format(name, value))
-
-
-fun02('abcd', 125, 88.33, [1, 22])  # b
+if __name__ == '__main__':
+    test = [[57, 12, 34, 67, 23, 97]]
+    for sub_test in test:
+        print('{}'.format(magic(sub_test)))
