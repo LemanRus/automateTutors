@@ -1,11 +1,8 @@
-def magic(lst):
-    new_lst = []
-    for i in lst:
-        if i % 2:
-            new_lst.append(i)
-    return new_lst
+def func(n):
+    a=0
+    for i in range(1,n):
+        a = a+i
+        print(a, end=' ')
 
-if __name__ == '__main__':
-    test = [[57, 12, 34, 67, 23, 97]]
-    for sub_test in test:
-        print('{}'.format(magic(sub_test)))
+f = func
+print(f(0))

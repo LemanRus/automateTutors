@@ -2,11 +2,12 @@ import re
 
 
 def regex_strip(*strings):
-    strip_pattern = re.compile(r"^(\s)(.*)(\s)$")
+    strip_start = re.compile(r"^\s*")
+    strip_end = re.compile(r"\s*$")
     if len(strings) == 1:
-        return strip_pattern.sub(r"\1\2", strings[0])
+        return strip_start.sub(st)
     else:
-        return strip_pattern.sub(strings[1], strings[0])
+        return strip_end.sub(strings[1], strings[0])
 
 
 print(regex_strip(" jlkhjlkh "))
